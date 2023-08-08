@@ -1,0 +1,52 @@
+
+<form action="edit.php" method="post">
+    <label for="person_id">Person ID:</label>
+    <input type="number" id="person_id" name="person_id" required>
+    <br>
+
+    <input type="checkbox" id="calculate_age" name="calculate_age" checked>
+    <label for="calculate_age">Calculate Age</label>
+    <br>
+
+    <input type="checkbox" id="convert_gender" name="convert_gender" checked>
+    <label for="convert_gender">Convert Gender</label>
+    <br>
+
+    <input type="submit" name="format" value="Format Person">
+</form>
+
+<h2>Save Person</h2>
+<form action="edit.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" name="surname" required>
+    <br>
+
+    <label for="birthdate">Birthdate:</label>
+    <input type="date" id="birthdate" name="birthdate" required>
+    <br>
+
+    <label for="gender">Gender (0 or 1):</label>
+    <input type="number" id="gender" name="gender" min="0" max="1" required>
+    <br>
+
+    <label for="city">Birth City:</label>
+    <input type="text" id="city" name="city" required>
+    <br>
+
+    <input type="submit" name="save" value="Save Person">
+</form>
+
+<h2>Delete Person</h2>
+<form action="edit.php" method="post">
+    <label for="delete_person_id">Person ID:</label>
+    <input type="number" id="delete_person_id" name="delete_person_id" required>
+    <br>
+
+    <input type="submit" name="delete" value="Delete Person">
+</form>
+</body>
+</html>
