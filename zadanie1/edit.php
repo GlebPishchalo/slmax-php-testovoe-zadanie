@@ -41,7 +41,7 @@ if (isset($_POST['format'])) {
     $gender = $_POST['gender'];
     $City = $_POST['city'];
 
-    $newPerson = new Person(null, $name, $surname, $birthdate, $gender, $City);
+    $newPerson = new Person( $name, $surname, $birthdate, $gender, $City);
     if ($personDb->savePerson($newPerson)) {
         echo "Person saved successfully.";
     } else {
@@ -56,4 +56,3 @@ if (isset($_POST['format'])) {
         echo "Error deleting person.";
     }
 }
-

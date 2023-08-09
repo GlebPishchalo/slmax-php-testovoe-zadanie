@@ -4,15 +4,15 @@ $username = "root";
 $password = "1234";
 $database = "testdb1";
 
-// Создание подключения
+
 $db = new mysqli($host, $username, $password, $database);
 
-// Проверка соединения
+
 if ($db->connect_error) {
     die("Ошибка подключения: " . $db->connect_error);
 }
 
-// Создание экземпляра класса PersonDatabase
+
 $personDb = new PersonDatabase($db);
 class PersonDatabase {
     private $db;
@@ -80,7 +80,7 @@ class PersonDatabase {
 }
 
 class Person {
-    
+    public $id;
     public $name;
     public $surname;
     public $birthdate;
